@@ -60,3 +60,57 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+## Crappy archive tool with automated SHA256
+archive(){
+  filename="$1";
+  if [[ $1 == "-v" ]]
+  then
+    filename="$2";
+  else
+    filename="$1";
+  fi
+
+  if [[ $filename == *".tar.bz2"* ]]
+  then
+    if [[ $1 == "-v" ]]
+    then
+      tar -cvjf $filename *;
+    else
+    tar -cjf $filename *;
+    fi
+  fi
+
+  if [[ $filename == *".tar.gz"* ]]
+  then
+    if [[ $1 == "-v" ]]
+    then
+      tar -cvzf $filename *;
+    else
+    tar -czf $filename *;
+    fi
+  fi
+
+  if [[ $filename == *".tar"* ]]
+  then
+    if [[ $1 == "-v" ]]
+    then
+      tar -cvf $filename *;
+    else
+    tar -cf $filename *;
+    fi
+  fi
+
+  if [[ $filename == *".zip"* ]]
+  then
+    if [[ $1 == "-v" ]]
+    then
+      zip -r $filename *;
+    else
+      zip -rq $filename *;
+    fi
+  fi
+
+  sha256sum $filename > $filename.sha256;
+  sha256sum -c $filename.sha256;
+}
