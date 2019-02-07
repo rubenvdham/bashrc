@@ -7,7 +7,7 @@ export EDITOR=$(which nano)
 
 
 # Aliases
-alias la='ls -al'
+alias la='ls -alh'
 alias pdfy='libreoffice --headless --convert-to pdf'
 
 alias g=git
@@ -16,6 +16,7 @@ alias gpom="git push origin master"
 
 # Just fun
 alias fucking=sudo
+alias die='shutdown now'
 
 #regex
 alias reg_email='echo "[^[:space:]]+@[^[:space:]]+"'
@@ -33,6 +34,21 @@ cdp () {
   done
   OLDPWD=$TEMP_PWD
 
+}
+
+## cd ../../ becomes up 2
+up(){
+  local d=""
+  limit=$1
+  for ((i=1 ; i <= limit ; i++))
+    do
+      d=$d/..
+    done
+  d=$(echo $d | sed 's/^\///')
+  if [ -z "$d" ]; then
+    d=..
+  fi
+  cd $d
 }
 
 
