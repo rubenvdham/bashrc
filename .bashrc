@@ -9,6 +9,7 @@ export EDITOR=$(which nano)
 # Aliases
 alias la='ls -alh'
 alias pdfy='libreoffice --headless --convert-to pdf'
+alias repr='python -c "import sys;file=open(sys.argv[1]);print(repr(file.read()))"'
 
 alias g=git
 alias ca="git add .;git commit;"
