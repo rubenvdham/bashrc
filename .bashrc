@@ -9,11 +9,14 @@ export EDITOR=$(which nano)
 # Aliases
 alias la='ls -alh'
 alias pdfy='libreoffice --headless --convert-to pdf'
-alias repr='python -c "import sys;file=open(sys.argv[1]);print(repr(file.read()))"'
-
+alias unexif='exiftool -all= -overwrite_original '
+alias repr='python -c "import sys;file=open(sys.argv[1]);print(repr(file.read())[1:-1])"'
+#alias strformat='python -c "import sys;print(str.format("sys.argv[1]"))"'
 alias g=git
 alias ca="git add .;git commit;"
 alias gpom="git push origin master"
+alias dg='echo "\`"' #Print deadgrave
+
 
 # Just fun
 alias fucking=sudo
