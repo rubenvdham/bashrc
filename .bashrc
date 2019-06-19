@@ -15,7 +15,7 @@ alias repr='python -c "import sys;file=open(sys.argv[1]);print(repr(file.read())
 alias g=git
 alias ca="git add .;git commit;"
 alias gpom="git push origin master"
-alias dg='echo "\`"' #Print deadgrave
+alias dg='echo "\`"| xclip -sel clipboard' #Print deadgrave
 
 
 # Just fun
