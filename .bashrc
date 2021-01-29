@@ -18,6 +18,11 @@ alias gpom="git push origin master"
 alias dg='echo -n "\`"| xclip -sel clipboard' #Print deadgrave
 alias copy='xclip -sel clipboard'
 
+# security stuff
+alias disableaslr="setarch x86_64 -R /bin/bash"
+
+
+
 # Just fun
 alias fucking=sudo
 alias die='shutdown now'
