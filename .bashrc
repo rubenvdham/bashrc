@@ -4,7 +4,7 @@ export PATH=$PATH:~/scripts
 export HISTCONTROL=ignoreboth
 export VISUAL=$(which nano)
 export EDITOR=$(which nano)
-
+export GOBIN=$GOPATH/bin
 
 # Aliases
 alias la='ls -alh'
@@ -15,8 +15,8 @@ alias repr='python -c "import sys;file=open(sys.argv[1]);print(repr(file.read())
 alias g=git
 alias ca="git add .;git commit;"
 alias gpom="git push origin master"
-alias dg='echo "\`"| xclip -sel clipboard' #Print deadgrave
-
+alias dg='echo -n "\`"| xclip -sel clipboard' #Print deadgrave
+alias copy='xclip -sel clipboard'
 
 # Just fun
 alias fucking=sudo
