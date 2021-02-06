@@ -2,8 +2,8 @@
 # Variables
 export PATH=$PATH:~/scripts
 export HISTCONTROL=ignoreboth
-export VISUAL=$(which nano)
-export EDITOR=$(which nano)
+export VISUAL=$(which vim)
+export EDITOR=$(which vim)
 export GOBIN=$GOPATH/bin
 
 # Aliases

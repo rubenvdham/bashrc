@@ -1,4 +1,4 @@
-install: append
+install: overwrite
 
 # appends the .bashrc to your current bashrc (safest option, but may have collions)
 append:
