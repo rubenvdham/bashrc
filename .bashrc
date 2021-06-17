@@ -7,6 +7,7 @@ export EDITOR=$(which vim)
 export GOBIN=$GOPATH/bin
 
 # Aliases
+alias pc="proxychains4"
 alias la='ls -alh'
 alias pdfy='libreoffice --headless --convert-to pdf'
 alias unexif='exiftool -all= -overwrite_original '
