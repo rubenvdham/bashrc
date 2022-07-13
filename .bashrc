@@ -21,7 +21,7 @@ alias copy='xclip -sel clipboard'
 
 # security stuff
 alias disableaslr="setarch x86_64 -R /bin/bash"
-
+alias nointernet="systemd-run --scope -p IPAddressDeny=any "
 
 
 # Just fun
