@@ -1,12 +1,16 @@
-
 # Variables
 export PATH=$PATH:~/scripts
 export HISTCONTROL=ignoreboth
 export VISUAL=$(which vim)
 export EDITOR=$(which vim)
+export GOPATH=~/.local/go
 export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
 
 # Aliases
+alias beep='paplay /usr/share/sounds/gnome/default/alerts/string.ogg'
 alias pc="proxychains4"
 alias la='ls -alh'
 alias pdfy='libreoffice --headless --convert-to pdf'
